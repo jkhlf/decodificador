@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Decodificador de texto para criptografar e descriptografar mensagens.">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="assets/me.png" alt="Foto do Desenvolvedor" aria-hidden="true">
+            <h1>Decodificador de Texto</h1>
+            <button id="toogle" onclick="toggleTheme()">Alternar Tema</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <textarea placeholder="Digite seu texto aqui!" id="inputText" aria-label="Área de entrada de texto"></textarea>
+            <p>Apenas letras minúsculas e sem acento.</p>
+            <div>
+                <button onclick="criptografar()" aria-label="Criptografar texto">
+                    <img src="assets/criptografia-de-dados(1).png" alt="Ícone de criptografia">
+                    Encriptar
+                </button>
+                <button onclick="descriptografar()" aria-label="Descriptografar texto">
+                    <img src="assets/criptografia-de-dados(2).png" alt="Ícone de descriptografia">
+                    Descriptografar
+                </button>
+            </div>
+        </section>
+        <aside>
+            <div id="outputText">
+                <div>
+                    <img id="outputImage" src="assets/coding-clipart-xl-2642316249.png" alt="Café alegre e computador com tarefas">
+                </div>
+                <div id="aside_text">
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
+            <div>
+                <button onclick="copiarTexto()" aria-label="Copiar texto">
+                    <img src="assets/icons8-copy-80.png" alt="Ícone de copiar">
+                    Copiar
+                </button>
+                <div id="historico"></div>
+                <div>
+                    <button onclick="limparHistorico()" aria-label="Limpar histórico">Limpar Histórico</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por João Khalaf &copy; 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
