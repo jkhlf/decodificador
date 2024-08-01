@@ -106,3 +106,13 @@ function toggleTheme() {
 window.onload = function() {
     carregarHistorico();
 };
+
+const toggle = document.getElementById('fullscreen_btn'); 
+
+toggle.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen(); 
+    }
+});
